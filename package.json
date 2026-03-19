@@ -1,7 +1,19 @@
 {
   "name": "monopoly-bio-quiz",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "An immersive, 3D browser-based Monopoly game where properties are earned by answering challenging, university-level biology, anatomy, zoology, and botany questions.",
+  "homepage": "https://github.com/manideep997/biology-monopoly#readme",
+  "keywords": [
+    "react",
+    "vite",
+    "monopoly",
+    "biology",
+    "quiz",
+    "educational-game",
+    "glassmorphism",
+    "3d-css"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
