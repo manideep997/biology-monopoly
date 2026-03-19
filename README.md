@@ -1,16 +1,49 @@
-# React + Vite
+# 🧬 Bio-Quiz Monopoly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Bio-Quiz Monopoly**, a spectacular, browser-based 3D educational board game! Roll the dice, move across the board, and expand your scientific empire by answering challenging university-level questions in Biology, Anatomy, Zoology, and Botany. 
 
-Currently, two official plugins are available:
+## ✨ Features
+- **Immersive 3D UI**: Built using premium glassmorphism and lightweight CSS 3D transforms. No heavy WebGL overhead!
+- **Educational Gameplay**: Land on properties to trigger engaging quizzes.
+- **Hard Science Mode**: Questions are university-level hard. Prepare yourself!
+- **Interactive Flashcards**: Learn from your successes (and mistakes) through beautifully rendered 3D flipping flashcards packed with fun "Did you know?" facts.
+- **Dynamic Board Actions**: From taking a break at "Recess" to getting sent to "Detention!", all the classic board game feelings are intact.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Getting Started
 
-## React Compiler
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Installation & Run
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/manideep997/biology-monopoly.git
+   cd biology-monopoly
+   ```
 
-## Expanding the ESLint configuration
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+   *(Note: This project strictly uses plain React and CSS without Tailwind, but includes Lucide-React for crisp iconography.)*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Play!** Open your browser to `http://localhost:5173/` (or the port Vite provides) and start rolling!
+
+## 🛠 Tech Stack
+- **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS (CSS Grid, Variables, and CSS 3D Transforms)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+## 📸 Screenshots & Feel
+The game relies heavily on CSS variables for thematic, neon-lit colors, mapped beautifully to the different scientific topics:
+- **Biology**: Cellular Green 🟩
+- **Anatomy**: Blood Red 🟥
+- **Zoology**: Safari Orange 🟧
+- **Botany**: Floral Purple 🟪
+
+*Dive in, roll the dice, and see if you have the knowledge to own the board!*
