@@ -30,21 +30,32 @@ export const GameProvider = ({ children }) => {
   };
 
   const movePlayer = (steps) => {
-    let finalPos = 0;
-    setPlayerPos((prev) => {
-      let nextPos = (prev + steps) % BOARD_SIZE;
-      if (prev + steps >= BOARD_SIZE) {
-        setMoney((m) => m + 200);
-        setMessage("Passed START! Collect $200.");
+    let currentStep = 0;
+    
+    const interval = setInterval(() => {
+      setPlayerPos((prev) => {
+        const next = (prev + 1) % BOARD_SIZE;
+        if (next === 0) {
+          // Passed GO
+          setMoney((m) => m + 200);
+          setMessage("Passed START! Collect $200.");
+        }
+        return next;
+      });
+      
+      currentStep++;
+      if (currentStep >= steps) {
+        clearInterval(interval);
+        
+        // Trigger tile action after the final step settles
+        setTimeout(() => {
+          setPlayerPos((latestPos) => {
+            handleTileAction(latestPos);
+            return latestPos;
+          });
+        }, 300);
       }
-      finalPos = nextPos;
-      return nextPos;
-    });
-
-    // Trigger tile action after moving animation (500ms)
-    setTimeout(() => {
-      handleTileAction(finalPos);
-    }, 500);
+    }, 300); // 300ms per step matches transition speed
   };
 
   const handleTileAction = (pos) => {

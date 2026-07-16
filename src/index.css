@@ -117,6 +117,18 @@ h1, h2, h3 {
   background: rgba(255, 255, 255, 0.02);
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.05);
+  animation: boardEntrance 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes boardEntrance {
+  0% {
+    opacity: 0;
+    transform: rotateX(85deg) rotateZ(-120deg) scale(0.1) translateZ(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(45deg) rotateZ(-25deg) scale(1) translateZ(0);
+  }
 }
 
 .board:hover {
@@ -346,6 +358,19 @@ h1, h2, h3 {
   width: 100%;
   max-width: 900px;
   margin-bottom: 2rem;
+  animation: fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .stats {
